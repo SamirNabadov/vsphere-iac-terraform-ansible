@@ -7,7 +7,7 @@ Infrastructure as Code on vSphere environment with Terraform and Ansible
 __Basic settings__
 ------------
 * Creating virtual machines from template
-* Making some configurations on virtual machines (creating user, installing packages, ntp, httpd, postgresql)
+* Making some configurations on virtual machines (users, packages, ntp, httpd, postgresql)
 
 __Note__
 ------------
