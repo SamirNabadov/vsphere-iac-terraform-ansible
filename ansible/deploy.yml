@@ -1,0 +1,37 @@
+---
+- name: will wait till reachable.
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Wait for system to become reachable
+      wait_for_connection:
+    - name: Gather facts for the first time
+      setup:
+
+- name: VM configuration
+  hosts: all
+  vars_files:
+    - vars/os_vars.yml
+  tasks: 
+    - include: vm_operation/firewall_selinux.yml
+    - include: vm_operation/prepare_user.yml
+    - include: vm_operation/install_packages.yml
+    - include: vm_operation/ntp_client.yml
+
+- name: Setup Apache web server
+  hosts: web
+  vars_files:
+    - vars/web_vars.yml
+  tasks:
+    - include: vm_operation/web_server.yml
+
+- name: Postgresql Database Installation and Configuration
+  hosts: db
+  become: yes
+  vars_files:
+    - vars/db_vars.yml
+  tasks:
+    - include: vm_operation/db_configuration.yml
+  handlers:
+    - name: restart postgres
+      service: name=postgresql state=restarted

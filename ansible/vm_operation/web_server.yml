@@ -1,0 +1,10 @@
+---
+- name: Install app packages
+  yum:
+    name: "{{ web_package }}"
+    state: present
+
+- name: ensure app is running
+  service:
+    name: "{{ web_service }}"
+    state: started
