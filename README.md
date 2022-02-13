@@ -11,10 +11,6 @@ __Basic settings__
 * Using null_resource on Terraform to execute Ansible plabooks
 * Configuring resources on Terraform in separate files for Web and Database virtual machines
 
-__Note__
-------------
-* Based on Terraform files and Ansible playbooks, you can create new VMs(including all settings) in vSphere within a few minutes and delete it in seconds.
-
 __Requirements__
 ------------
 * Terraform v1.1.4
@@ -27,6 +23,10 @@ Dependencies
 * Requires elevated root privileges
 * Add hosts address and names for VMs : ./ansible/inventory and ./terraform.tfvars
 * Prepare variable file based on your requirements: ./terraform.tfvars and ./ansible/vars/...
+
+__Note__
+------------
+* Based on Terraform files and Ansible playbooks, you can create new VMs(including all settings) in vSphere within a few minutes and delete it in seconds.
 
 Running the Deployment
 ----------------------
