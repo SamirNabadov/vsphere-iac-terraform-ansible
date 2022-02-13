@@ -11,7 +11,7 @@ __Basic settings__
 
 __Note__
 ------------
-* Based on Terraform files and Ansible playbooks, you can create new VMs(including all settings) in vCenter within a few minutes and delete it in seconds.
+* Based on Terraform files and Ansible playbooks, you can create new VMs(including all settings) in vSphere within a few minutes and delete it in seconds.
 
 __Requirements__
 ------------
