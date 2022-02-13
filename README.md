@@ -6,7 +6,7 @@ Infrastructure as Code on vSphere environment with Terraform and Ansible
 
 __Basic settings__
 ------------
-* Creating virtual machines from template Terraform
+* Creating virtual machines from template with Terraform
 * Installing packages based on Ansible playbooks, setting up httpd and postgresql
 * Using null_resource on Terraform to execute Ansible plabooks
 * Configuring resources on Terraform in separate files for Web and Database virtual machines
